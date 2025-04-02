@@ -31,19 +31,38 @@ cd vehicle-management-system
 npm install
 ```
 
-3. Start the mock API
+3. Start the backend API (on port 3000)
 
 ```
-npm run mock-api
+# If using the included JSON Server for testing:
+json-server --watch db.json --port 3000
 ```
 
-4. Start the development server (in a new terminal)
+4. Start the frontend development server (in a new terminal)
+
+For Mac/Linux:
 
 ```
 npm start
 ```
 
-The application will be available at [http://localhost:3000](http://localhost:3000).
+For Windows:
+
+```
+npm run start:windows
+```
+
+The frontend application will be available at [http://localhost:8000](http://localhost:8000).
+
+## Port Configuration
+
+- Frontend: Running on port 8000
+- Backend API: Expected to run on port 3000
+
+To change these ports:
+
+- Frontend port: Modify the PORT value in `.env` and update the start scripts in `package.json`
+- Backend API URL: Update the REACT_APP_API_URL in `.env`
 
 ## API Endpoints
 
@@ -61,6 +80,15 @@ The application will be available at [http://localhost:3000](http://localhost:30
   - `/components`: React components
   - `/contexts`: Context providers for state management
   - `/services`: API services and hooks
+
+## Environment Variables
+
+The project uses the following environment variables:
+
+- `REACT_APP_API_URL`: The base URL for API requests (default: http://localhost:3000)
+- `PORT`: The port on which the development server runs (default: 8000)
+
+These can be configured in the `.env` file.
 
 ## Technologies Used
 
