@@ -20,11 +20,6 @@ A React application for managing vehicle fleet.
 
 1. Clone the repository
 
-```
-git clone https://github.com/yourusername/vehicle-management-system.git
-cd vehicle-management-system
-```
-
 2. Install dependencies
 
 ```
